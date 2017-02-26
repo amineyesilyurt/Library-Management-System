@@ -6,9 +6,7 @@ package edu.gtu.amine;
  */
 public interface User {
     
-    public void displayMyProfile();
-    public void booksOntheShelf();
-    public void allBooks();
-    public void myBorrowed();
-    
+    public abstract void displayMyProfile();
+    public abstract boolean logIn();
+   
 }
