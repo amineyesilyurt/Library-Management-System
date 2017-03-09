@@ -153,7 +153,7 @@ public class Book {
      *
      * @return string of book information in the form of csv(comma seperated ) format
      */
-    String toCsvFormat() {
+    public String toCsvFormat() {
         String result = String.format(getBookID() + "," + getName() + "," + getAuthor() + "\n");
         return result;
     }

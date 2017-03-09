@@ -72,10 +72,10 @@ public class LibraryUser extends AbstractUser {
      */
     @Override
     public void displayMyProfile() {
-        System.out.println("******************YOUR PRFOFILE******************");
+        System.out.println("\n******************YOUR PRFOFILE******************");
         System.out.println(this.toString());
         listMyBorrowed();
-        System.out.println("*************************************************");
+        System.out.println("*************************************************\n");
     }
 
     /**
@@ -203,7 +203,7 @@ public class LibraryUser extends AbstractUser {
      *
      * @return string of user's information formatted csv(comma seperated)
      */
-    String toCsvFormat() {
+    public  String toCsvFormat() {
         String result = String.format(getUserID() + "," + getUserName() + "," + getPassword() + "," + getCountOfBorrowed() + "\n");
         return result;
     }

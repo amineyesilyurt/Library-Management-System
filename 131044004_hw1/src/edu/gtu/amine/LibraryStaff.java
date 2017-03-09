@@ -64,7 +64,7 @@ public class LibraryStaff extends AbstractUser {
      *  Display all users (not include staffs ).
      */
     public void displayAllUserOnDatabase() {
-        System.out.println(database.getUsers().size());
+        System.out.println("All Users: ");
         for (int i = 0; i < database.getUsers().size(); ++i) {
             User usr = database.getUsers().get(i);
             if (usr instanceof LibraryUser) {

@@ -1,6 +1,7 @@
 package edu.gtu.amine;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -8,8 +9,8 @@ import java.util.ArrayList;
  */
 public class Database {
 
-    private ArrayList<User> users = new ArrayList<User>(); //keeps library users  and library staffs
-    private ArrayList<Book> books = new ArrayList<Book>();//keeps books
+    private LinkedList<User> users = new LinkedList<User>(); //keeps library users  and library staffs
+    private LinkedList<Book> books = new LinkedList<Book>();//keeps books
     private static Database dbIsntance;  //databese singleton object
 
     /**
@@ -36,7 +37,7 @@ public class Database {
      *
      * @return users as ArryaList
      */
-    public ArrayList<User> getUsers() {
+    public LinkedList<User> getUsers() {
         return users;
     }
 
@@ -44,7 +45,7 @@ public class Database {
      *
      * @return books as ArrayList
      */
-    public ArrayList<Book> getBooks() {
+    public LinkedList<Book> getBooks() {
         return books;
     }
 
@@ -71,12 +72,12 @@ public class Database {
 
     /**
      *
-     * @param theNewBook the book which will remove from database
+     * @param theBook the book which will remove from database
      * @throws Exception exception will throw if book have not returned yet or the book is not in database
      */
-    public void removeBook(Book theNewBook) throws Exception {
+    public void removeBook(Book theBook) throws Exception {
         for (int i = 0; i < books.size(); ++i) {
-            if (theNewBook.equals(books.get(i))) {
+            if (theBook.equals(books.get(i))) {
                 if (books.get(i).getWhoBorrowed() == -1) {
                     books.remove(i);
                     return;
